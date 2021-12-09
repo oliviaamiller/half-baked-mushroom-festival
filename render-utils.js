@@ -1,3 +1,5 @@
+
+
 export function renderMushroom() {
     const div = document.createElement('div');
     div.classList.add('mushroom');
@@ -10,11 +12,13 @@ export function renderFriend(friend) {
     const friendDiv = document.createElement('div');
     const nameEl = document.createElement('p');
     const emojiEl = document.createElement('p');
+   
 
     // add friend, name, and emoji classes to the appropriate elements
     friendDiv.classList.add('friend');
     nameEl.classList.add('name');
     emojiEl.classList.add('emoji');
+
 
     // put the friend's name in the nameEl
     nameEl.textContent = friend.name;
@@ -24,15 +28,19 @@ export function renderFriend(friend) {
 
     if (friend.satisfaction === 1) {
         emojiEl.textContent = '😔';
-    } else if (friend.satisfaction === 2) {
+    } if (friend.satisfaction === 2) {
         emojiEl.textContent = '🥺';
-    } else if (friend.satisfaction === 3) {
+    } if (friend.satisfaction === 3) {
         emojiEl.textContent = '😋';
-    } else if (friend.satisfaction === 4) {
+    } if (friend.satisfaction === 4) {
         emojiEl.textContent = '😎';
-    } else {
+    } if (friend.satisfaction >= 5) {
         emojiEl.textContent = '🍄';
+    } if (friend.satisfaction === 0) {
+        emojiEl.textContent = '😵';
     }
+
+
 
     // append the emojiEl and nameEl to the outer div
     friendDiv.append(nameEl, emojiEl);
@@ -40,3 +48,5 @@ export function renderFriend(friend) {
     // return the outer div
     return friendDiv;
 }
+
+

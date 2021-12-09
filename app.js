@@ -7,6 +7,7 @@ const friendInputEl = document.getElementById('friend-input');
 const mushroomsEl = document.querySelector('.mushrooms');
 const addMushroomButton = document.getElementById('add-mushroom-button');
 const addFriendButton = document.getElementById('add-friend-button');
+
 // initialize state
 
 let mushroomCount = 3;
@@ -81,6 +82,8 @@ function displayFriends() {
         eachFriend.addEventListener('click', () => {
             findFriendByName(friend.name, friendData);
 
+            console.log(eachFriend);
+
         // and if the friend's satisfaction level is below 3 and you have mushrooms left
             if (friend.satisfaction < 5 && mushroomCount > 0) {
         // increment the friends satisfaction and decrement your mushrooms
@@ -89,8 +92,10 @@ function displayFriends() {
             }
 
             if (friend.satisfaction < 5 && mushroomCount > 0 && Math.random() < .5) {
-                friend.satisfaction--;
+                friend.satisfaction = 0;
+
                 alert('Oh  no! You fed your friend a poisonous mushroom, be careful!');
+
             }
 
             if (mushroomCount === 0) {

@@ -171,6 +171,11 @@ footer {
     line-height: 3rem;
 }
 
+.friend .sick-emoji {
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
 .friend:hover {
     transition: all .1s ease-in-out;
     cursor: pointer;

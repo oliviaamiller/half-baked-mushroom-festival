@@ -23,13 +23,13 @@ export function renderFriend(friend) {
     emojiEl.textContent = friend.satisfaction; 
 
     if (friend.satisfaction === 1) {
-        friend.satisfaction.textContent = '🥺';
+        emojiEl.textContent = '🥺';
     } else if (friend.satisfaction === 2) {
-        friend.satisfaction.textContent = '😋';
+        emojiEl.textContent = '😋';
     } else if (friend.satisfaction === 3) {
-        friend.satisfaction.textContent = '😎';
-    } else (friend.satisfaction >= 4) {
-        friend.satisfaction.textContent = '🍄';
+        emojiEl.textContent = '😎';
+    } else {
+        emojiEl.textContent = '🍄';
     }
 
     // append the emojiEl and nameEl to the outer div

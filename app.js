@@ -106,6 +106,9 @@ function displayMushrooms() {
 
         mushroomsEl.append(eachMushroom);
     }
+    if (mushroomCount === 0) {
+        alert('You ran out of mushrooms, go forage for more to keep feeding your friends!');
+    }
 }
 
 displayFriends();

@@ -78,7 +78,7 @@ function displayFriends() {
             findFriendByName(friend.name, friendData);
 
         // and if the friend's satisfaction level is below 3 and you have mushrooms left
-            if (friend.satisfaction < 3 && mushroomCount > 0) {
+            if (friend.satisfaction < 4 && mushroomCount > 0) {
         // increment the friends satisfaction and decrement your mushrooms
                 friend.satisfaction++; 
                 mushroomCount--;

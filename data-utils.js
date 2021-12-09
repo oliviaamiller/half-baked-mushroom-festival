@@ -1,15 +1,11 @@
 export function findFriendByName(name, friends) {
-    // iterate through the friends
-    
+    // iterate through the friends 
+    for (let friend of friends) {
+
     // when you find a friend with the correct name, return that friend
+        if (friend.name === name) {
+            return name;
+        }
+    }
 }
 
-
-
-function findByName(name, array) {
-    for (let item of array) {
-      if (item.name === name) {
-         return item;
-      }
-   }
- }

@@ -33,7 +33,7 @@ const friendData = [
 
 addFriendButton.addEventListener('click', () => {
     // get the name from the input
-    const friendName = friendData.name;
+    const friendName = friendInputEl.value;
 
     // create a new friend object
     const newFriend = {

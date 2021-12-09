@@ -12,9 +12,9 @@ export function renderFriend(friend) {
     const emojiEl = document.createElement('p');
 
     // add friend, name, and emoji classes to the appropriate elements
-    friendDiv.classList.add('friend-div');
-    nameEl.classList.add('friend-name');
-    emojiEl.classList.add('friend-emoji');
+    friendDiv.classList.add('friend');
+    nameEl.classList.add('name');
+    emojiEl.classList.add('emoji');
 
     // put the friend's name in the nameEl
     nameEl.textContent = friend.name;

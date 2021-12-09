@@ -50,7 +50,7 @@ addFriendButton.addEventListener('click', () => {
     friendData.push(newFriend);
 
     // reset the input
-    friendInputEl.textContent = '';
+    friendInputEl.value = '';
     // display all the friends (use a function here)
     displayFriends();
 });

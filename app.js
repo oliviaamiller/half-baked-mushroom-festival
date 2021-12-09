@@ -87,6 +87,12 @@ function displayFriends() {
                 friend.satisfaction++; 
                 mushroomCount--;
             }
+
+            if (Math.random() < .25) {
+                friend.satisfaction--;
+                mushroomCount--;
+                alert('Oh  no! You fed your friend a poisonous mushroom, be careful!');
+            }   
         // then display your friends and mushrooms with the updated state
             friendsEl.textContent = friendData;
             mushroomsEl.textContent = mushroomCount;  

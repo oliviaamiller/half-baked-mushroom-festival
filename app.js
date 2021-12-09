@@ -88,11 +88,15 @@ function displayFriends() {
                 mushroomCount--;
             }
 
-            if (Math.random() < .25) {
+            if (friend.satisfaction < 5 && mushroomCount > 0 && Math.random() < .5) {
                 friend.satisfaction--;
-                mushroomCount--;
                 alert('Oh  no! You fed your friend a poisonous mushroom, be careful!');
-            }   
+            }
+
+            if (mushroomCount === 0) {
+                alert('You ran out of mushrooms, go forage for more to keep feeding your friends!');
+            }
+   
         // then display your friends and mushrooms with the updated state
             friendsEl.textContent = friendData;
             mushroomsEl.textContent = mushroomCount;  
@@ -115,9 +119,6 @@ function displayMushrooms() {
         const eachMushroom = renderMushroom();
 
         mushroomsEl.append(eachMushroom);
-    }
-    if (mushroomCount === 0) {
-        alert('You ran out of mushrooms, go forage for more to keep feeding your friends!');
     }
 }
 

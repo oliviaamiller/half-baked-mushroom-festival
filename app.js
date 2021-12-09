@@ -41,7 +41,7 @@ addFriendButton.addEventListener('click', () => {
     };
 
     if (newFriend.name === '') {
-        const randomName = ['Ernie', 'Jesse', 'Kali', 'PJ'];
+        const randomName = ['Ernie', 'Jesse', 'Kali', 'Rye'];
         let i = Math.floor(Math.random() * 3);
         newFriend.name = randomName[i];
     }
@@ -57,7 +57,7 @@ addFriendButton.addEventListener('click', () => {
 
 
 addMushroomButton.addEventListener('click', () => {
-    if (Math.random() > .5) {
+    if (Math.random() > .25) {
         alert('found a mushroom!');
 
         mushroomCount++;
@@ -91,7 +91,7 @@ function displayFriends() {
                 mushroomCount--;
             }
 
-            if (friend.satisfaction < 5 && mushroomCount > 0 && Math.random() < .5) {
+            if (friend.satisfaction < 5 && mushroomCount > 0 && Math.random() < .33) {
                 friend.satisfaction = 0;
 
                 alert('Oh  no! You fed your friend a poisonous mushroom, be careful!');

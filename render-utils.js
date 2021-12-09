@@ -23,10 +23,12 @@ export function renderFriend(friend) {
     emojiEl.textContent = friend.satisfaction; 
 
     if (friend.satisfaction === 1) {
-        emojiEl.textContent = '🥺';
+        emojiEl.textContent = '😔';
     } else if (friend.satisfaction === 2) {
-        emojiEl.textContent = '😋';
+        emojiEl.textContent = '🥺';
     } else if (friend.satisfaction === 3) {
+        emojiEl.textContent = '😋';
+    } else if (friend.satisfaction === 4) {
         emojiEl.textContent = '😎';
     } else {
         emojiEl.textContent = '🍄';
